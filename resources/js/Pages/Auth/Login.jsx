@@ -6,6 +6,7 @@ import InputLabel from '@/Components/InputLabel';
 import PrimaryButton from '@/Components/PrimaryButton';
 import TextInput from '@/Components/TextInput';
 import { Head, Link, useForm } from '@inertiajs/react';
+import Register from '../../../../vendor/laravel/breeze/stubs/inertia-react-ts/resources/js/Pages/Auth/Register';
 
 export default function Login({ status, canResetPassword }) {
     const { data, setData, post, processing, errors, reset } = useForm({
@@ -90,6 +91,12 @@ export default function Login({ status, canResetPassword }) {
                     <PrimaryButton className="ms-4" disabled={processing}>
                         Log in
                     </PrimaryButton>
+                    <Link
+                        href={route('register')}
+                        className="inline-flex items-center px-2 m-2 py-1 border-gray-800 text-gray-700 border border-transparent rounded-md font-semibold text-xsuppercase tracking-widest hover:bg-gray-700 hover:text-white focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150"
+                    >
+                        Register
+                    </Link>
                 </div>
             </form>
         </GuestLayout>

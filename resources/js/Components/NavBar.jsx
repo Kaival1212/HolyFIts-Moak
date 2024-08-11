@@ -6,17 +6,17 @@ import { Link } from '@inertiajs/react';
 import MagnifyingGlassIcon from './HeroIcons/MagnifyingGlassIcon';
 import Dropdown from './Dropdown';
 
+
 function NavBar({ auth }) {
     const appUrl = import.meta.env.VITE_APP_URL;
 
-    console.log(auth)
     return (
         <>
             <div className='shadow-xl'>
                 <nav className='flex flex-col md:flex-row p-3 md:justify-around items-center bg-white'>
                     <div className='flex justify-between items-center w-full md:w-auto'>
                         <Link href={route('home')}>
-                            <img src={`${appUrl}/logo.png`} alt="Logo" className='h-14 w-auto' />
+                            <img src={'/logo.png'} alt="Logo" className='h-14 w-auto' />
                         </Link>
                         <div className='flex gap-6 md:hidden'>
                             <div className='hover:text-gray-700 hover:scale-105'><HeartIcon /></div>
